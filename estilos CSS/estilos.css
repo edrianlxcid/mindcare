@@ -1,0 +1,666 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  
+} 
+  
+  /* Estilos para el header */
+
+body{
+  font-family: "Special Gothic", 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+.header-1 {
+  justify-content: center; /* Centra los elementos verticalmente */
+  background: url('../recursos/fondo2.jpg') no-repeat center center/cover; /* Fondo ajustado */
+  height: 400px; /* Ocupa toda la altura de la pantalla */
+  background-attachment: fixed;
+}
+  
+  /* Navegación - Menu */
+.menu {
+  display: flex;
+  justify-content: center; /* Centra los enlaces */
+  gap: 10px; /* Espacio entre los enlaces */
+  margin: 0; /* Margen superior e inferior */
+}
+  
+.menu a {
+  text-decoration: none;
+  color: #fff; /* Texto blanco */
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: rgba(0, 0, 0, 0.572); /* Fondo semi-transparente */
+  transition: all 0.3s ease; /* Transición suave para hover */
+}
+  
+.menu a:hover {
+  background-color: #fff; /* Fondo blanco al pasar el mouse */
+  color: #000; /* Texto negro */
+}
+  
+  /* Bienvenida */
+.bienvenida{
+  width: 100%;
+  height: 300px;
+  padding: 60px;
+  margin-right: 40px;  
+  margin-top: 10px;
+  margin-right: 40px; 
+}
+
+.bienvenida-texto{
+  width: 80%;
+}
+
+
+.titulo{
+ font-size: 60px;
+ text-decoration: none;
+ color: #fff; /* Texto blanco */
+ background-color: rgba(0, 0, 0, 0.891);
+ transition: all 0.3s ease; /* Transición suave para hover */
+ border-radius: 8px;
+}
+
+.titulo:hover{
+  background-color: #fff; /* Fondo blanco al pasar el mouse */
+  color: #000; /* Texto negro */
+}
+
+.centro{
+  text-align: right;
+  font-size: 20px;
+  font-style: italic;
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgba(255, 251, 251, 0.663);
+  text-decoration: none;
+  color: #000000; /* Texto blanco */
+  transition: all 0.3s ease;
+}
+
+.centro:hover{
+  background-color: #000000bb; /* Fondo blanco al pasar el mouse */
+  color: #ffffff; 
+}
+
+
+
+/*inicio del main-->*/
+/* Estilos para el contenedor general */
+.main {
+  display: block; /* Activamos Flexbox */
+  justify-content: center; /* Centramos las cajas horizontalmente */
+  align-items: center; /* Alineamos las cajas verticalmente si es necesario */
+  background: url('../recursos/fondo3.jpg');
+  background-attachment: fixed;
+}
+  
+.productos {
+  max-width: 100%; /* Ancho total del contenedor */
+  margin: 0 auto; /* Centramos el contenedor */
+}
+  
+  /* Estilos para las cajas dentro de título-servicios */
+.titulo-servicios {
+  display: flex; /* Alinear las cajas horizontalmente */
+  justify-content: center; /* Espaciado entre las cajas */
+  align-items: center;
+  gap: 50px;
+  flex-wrap: nowrap; /* Ajustar cajas si hay más contenido */
+}
+
+.img_servicios{
+  width: 250px;
+  height: 250px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+  
+.caja {
+  width: 500px;
+  height: auto;
+  padding: 40px; /* Espaciado interno */
+  margin: 10px; /* Separación externa entre cajas */
+  text-align: center; /* Centrar texto dentro de la caja */
+  border: 5px solid #ccc; /* Bordes */
+  border-radius: 30px;
+  position: relative; /* Permite posicionar el pseudo-elemento dentro de la caja */
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  z-index: 1; /* Asegura que el contenido esté encima del fondo */
+}
+  
+.caja:hover{  
+  opacity: 1;
+  transform: scale(1.15);
+  box-shadow: 15px 15px 12px rgba(0, 0, 0, 0.3);
+} 
+.caja::before {
+  content: ""; /* Necesario para los pseudo-elementos */
+  position: absolute; /* Posiciona el pseudo-elemento dentro de la caja */
+  top: 0;
+  left: 0;
+  width: 100%; /* Hace que cubra toda la caja */
+  height: 100%;
+  border-radius: 30px; /* Coincide con el borde de la caja */
+  background-color: #f6f6f6c5;
+  filter: blur(20px); /* Aplica el desenfoque */
+  z-index: -1; /* Envía el fondo detrás del contenido */
+}
+  
+  /* Estilos para texto dentro de las cajas */
+.clinica {
+  margin: 10px;
+  font-size: 30px; /* Tamaño de título */
+  color: rgb(59, 59, 53);
+  font-weight: bold; /* Resaltar título */
+}
+  
+.descrip {
+  margin-top: 25px;
+  font-size: 14px; /* Tamaño de descripción */
+  color: #000000; /* Color del texto de descripción */
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* Fin de de la seccion productos */
+
+/*inicio de seccion sobre nosotros*/
+
+/* Contenedor principal */
+.sobre-n {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0f2f1; /* Borde sutil */
+  margin-top: 30px;
+}
+
+/* Título "Acerca de Mind Care" */
+.mind-care {
+  color: #202829db; /* Verde azulado  */
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  font-weight: 600;
+}
+
+.mind-care::after {
+  content: ""; /*crea un elemento vacío*/
+  display: block;
+  width: 80px; /*Ancho de la línea*/
+  height: 3px; /*Grosor de la línea*/
+  background: #5d725eef; /* doy color verde */
+  margin: 15px auto 0; /*centrado y espacio arriba*/
+}
+
+/* Párrafos */
+.info-centro{
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.12rem;
+}
+
+/* Lista de especialidades */
+.proximamente {
+  padding-left: 25px;
+  margin: 25px 0;
+  columns: 1; /* Una columna para móvil */
+}
+
+.main .proximamente li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  list-style: none;
+  color: #444;
+  line-height: 1.6;
+  break-inside: avoid; /* Evita que los items se partan */
+}
+
+.main .proximamente li::before {
+  content: "•";
+  color: #64bcf8; /* Viñetas verdes */
+  font-size: 1.5em;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+
+/* Textos destacados */
+.main .info-centro strong {
+  color: #2a7377;
+  font-weight: 600;
+}
+
+ /*Filosofía (párrafo final)*/
+.main .final:last-of-type {
+  font-style: italic;
+  background: #f8fafc;
+  padding: 15px;
+  border-left: 4px solid #193f1ae6;
+  border-radius: 0 8px 8px 0;
+} 
+
+/* ----- media queris ----- */
+@media (min-width: 768px) {
+  .main .acerca-de article ul {
+      columns: 2; /* Dos columnas en pantallas grandes */
+      gap: 30px;
+  }
+  
+  .main .acerca-de article {
+      padding: 50px;
+  }
+}
+
+
+/*fin seccion de sobre nosotros*/
+
+/* inicio de la seccion profesionales*/
+.profe {
+  background-size: cover;
+  padding: 50px 20px;
+  min-height: 100px;
+}
+
+/* Sección central */
+.tabla-profesionales {
+  max-width: 1200px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  font-size: 26px;
+}
+
+h2 {
+  text-align: center;
+  color: #1b1b1bb4;
+  margin-bottom: 20px;
+}
+
+/* Tabla responsive */
+.tabla-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+td{
+  font-size: 30px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+
+}
+
+th {
+  background-color: #000000bb;
+  color: white;
+  font-size: 1.1em;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* Imágenes redondeadas */
+img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+/*acerca de nostros*/
+
+/*fin acerca de nosotros*/
+
+/*Seccion para el formulario estilos*/
+
+#cita {     
+  background-color: rgba(245, 245, 245, 0.81);     
+  padding: 20px;     
+  border-radius: 15px;     
+  max-width: 800px;     
+  width: 90%;       
+  margin: 30px auto;     
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 100; /* Asegura que se muestre por encima de otros elementos */
+}  
+
+/* Estilos específicos para el título dentro de la sección del formulario */ 
+#cita h2 {     
+  color: #120b15ad;     
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 28px;
+}  
+
+/* Estructura del formulario de dos columnas - solo afecta al formulario dentro de #formulario */
+#cita form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -10px;
+}
+
+#cita .form-column {
+  width: 48%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+#cita .form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Estilos para las etiquetas dentro del formulario */
+#cita label {
+  display: block;
+  margin-bottom: 5px;
+  color: #2c2430b2;
+  font-weight: 500;
+}
+
+/* Estilos exclusivos para los campos dentro de este formulario */ 
+#cita input[type="text"], 
+#cita input[type="email"],
+#cita input[type="tel"],
+#cita input[type="date"],
+#cita input[type="time"] {     
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;       
+  font-size: 16px;       
+  width: 100%;       
+  padding: 10px;     
+  margin: 5px 0;
+  display: block;     
+  border: 2px solid #675d66cd;     
+  border-radius: 5px;     
+  box-sizing: border-box;  
+}  
+
+#cita input[type="text"]:focus, 
+#cita input[type="email"]:focus,
+#cita input[type="tel"]:focus,
+#cita input[type="date"]:focus,
+#cita input[type="time"]:focus {     
+  border-color: #c512bc;     
+  outline: none;
+  box-shadow: 0 0 5px rgba(197, 18, 188, 0.3);
+}
+
+#cita br {
+  display: none;
+}
+
+/* Contenedor para el botón dentro del formulario */
+#cita .btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Estilo para el botón de envío exclusivamente en este formulario */ 
+#cita button[type="submit"] {     
+  background-color: #487473db;     
+  color: black;     
+  padding: 12px 30px;     
+  border: none;     
+  border-radius: 5px;     
+  cursor: pointer;     
+  font-weight: bold;     
+  transition: all 0.3s ease;
+  font-size: 16px;
+} 
+
+#cita button[type="submit"]:hover {     
+  background-color: #6a5565;
+  transform: translateY(-2px);
+}
+
+#cita button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+/*--Ubicación---/
+/Contenedor principal*/
+.main .ubicacion{
+  padding: 60px; 
+  overflow: hidden;
+  
+}
+
+.main .ubicacion .titulo2{
+  text-align: center;
+  font-size: 40px; 
+  line-height: 40px;  
+  font-weight: 700; 
+  margin-bottom: 40px;
+  color: #000;
+}
+
+/* Columna izquierda: Dirección */
+.main .ubicacion .direccion{
+  float: left; 
+  width: 50%;   
+  text-align: left;  
+}
+
+
+
+/*  TÍTULOS (calle, sector y ciudad)*/
+.main .ubicacion .direccion p{
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+/* Estilo para los labels ( calle, sector y ciudad) */
+.main .ubicacion .direccion .titulo-dato{
+  font-weight: 700;  /* Negrita fuerte*/
+  color: #000;
+  display: inline-block;
+  width: 70px; /*Espacio fijo para la alineación*/
+}
+
+/*Estilos para la ciudad en mayúscula*/
+.main .ubicacion .direccion .ciudad{
+  text-transform: uppercase; /*QUITO*/
+  font-weight: 700; /*Negrita*/
+}
+ 
+/* aseguramos que los valores (S12-110, José peralta, Quito) no hereden negrita */
+.main .ubicacion .direccion .calle,
+.main .ubicacion .direccion .sector,
+.main .ubicacion .direccion .ciudad{
+  font-weight: 400; /*peso normal */
+}
+
+
+
+/*  columna derecha:  Horarios */
+.main .ubicacion .horarios{
+float: right;
+width: 50%;
+text-align: right;
+overflow: hidden;
+}
+
+
+/* Título Horarios */
+.main .ubicacion .horarios h4{
+text-align: center;
+margin-bottom: 20px;
+font-size: 1.5rem; 
+}
+
+/* 3 Bloques de horarios separados */
+.main .ubicacion .horarios .entre-semana,
+.main .ubicacion .horarios .fin-semana{
+width: 50%;
+float: left;
+text-align: center;
+margin-bottom: 15px; /*Espacio añadido entre bloques*/
+}
+
+.mapa{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 20px;
+  padding-bottom: 30px;
+
+}
+/* Mapa */
+.contenedor-mapa{
+width: 50%;
+overflow: hidden;
+
+}
+
+.main .mapa iframe{
+width: 100%;
+max-height: 600px;
+border: 0; /*elimina borde por defecto*/
+}
+
+/*media queris para el menu y servicios*/
+
+/* Estilos para pantallas de hasta 768px de ancho (Tablets y menos) */
+@media (max-width: 768px) {
+
+  .header-1 {
+    height: 300px; /* Reducimos un poco la altura del header */
+  }
+
+  .menu {
+    flex-wrap: wrap; /* Permite que los enlaces del menú se envuelvan si no caben */
+    gap: 5px; /* Reducimos un poco el espacio entre enlaces */
+    padding: 0 10px; /* Añadimos un poco de padding horizontal */
+  }
+
+  .menu a {
+    font-size: 16px; /* Reducimos un poco el tamaño de fuente del menú */
+    padding: 8px 8px; /* Ajustamos el padding del menú */
+  }
+
+  .bienvenida {
+    padding: 30px; /* Reducimos el padding de la sección bienvenida */
+    margin-right: 0; /* Eliminamos el margen derecho fijo */
+  }
+
+  .bienvenida-texto {
+    width: 95%; /* Aumentamos un poco el ancho para ocupar más espacio disponible */
+    margin: 0 auto; /* Centramos el texto */
+  }
+
+  .titulo {
+    font-size: 40px; /* Reducimos el tamaño del título principal */
+  }
+
+  .centro {
+    font-size: 18px; /* Reducimos un poco el tamaño del texto del centro */
+    text-align: center; /* Centramos el texto para pantallas más pequeñas */
+  }
+
+  .titulo-servicios {
+    flex-direction: column; /* Apila las cajas de servicio verticalmente */
+    gap: 20px; /* Reducimos el espacio entre las cajas apiladas */
+    padding: 20px; /* Añadimos padding al contenedor de servicios */
+  }
+
+  .caja {
+    width: 90%; /* Hacemos que las cajas ocupen casi todo el ancho */
+    height: auto; /* La altura se ajustará al contenido */
+    padding: 20px; /* Reducimos el padding interno de las cajas */
+    margin: 10px auto; /* Centramos las cajas apiladas y mantenemos margen vertical */
+  }
+
+  .img_servicios {
+    width: 200px; /* Reducimos el tamaño de la imagen */
+    height: 200px;
+  }
+
+  .clinica {
+    font-size: 24px; /* Reducimos el tamaño del título de la caja */
+  }
+
+  .descrip {
+    font-size: 14px; /* Mantenemos el tamaño de la descripción o lo ajustamos si es necesario */
+  }
+}
+
+/* Estilos para pantallas de hasta 600px de ancho (Teléfonos móviles) */
+@media (max-width: 600px) {
+
+  .header-1 {
+    height: 250px; /* Reducimos aún más la altura del header en móviles */
+  }
+
+  .menu a {
+     font-size: 14px; /* Reducimos más el tamaño de fuente del menú */
+     padding: 6px 6px; /* Ajustamos el padding */
+  }
+
+  .bienvenida {
+    padding: 20px; /* Reducimos más el padding de la bienvenida */
+  }
+
+  .bienvenida-texto {
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  .titulo {
+    font-size: 30px; /* Reducimos el tamaño del título principal para móviles */
+  }
+
+  .centro {
+    font-size: 16px; /* Reducimos el tamaño del texto del centro para móviles */
+  }
+
+  .caja {
+    width: 95%; /* Hacemos que las cajas sean casi del ancho completo */
+    padding: 15px; /* Reducimos el padding de las cajas en móviles */
+    margin: 8px auto; /* Ajustamos el margen vertical */
+  }
+
+   .img_servicios {
+    width: 150px; /* Reducimos más el tamaño de la imagen */
+    height: 150px;
+  }
+
+  .clinica {
+    font-size: 20px; /* Reducimos el tamaño del título de la caja para móviles */
+  }
+
+  .descrip {
+    font-size: 13px; /* Ajustamos si es necesario */
+  }
+}
